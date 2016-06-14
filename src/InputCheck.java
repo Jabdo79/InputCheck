@@ -7,7 +7,7 @@ public class InputCheck {
 		System.out.print(msg);
 		while (!sc.hasNextInt()){
 			System.out.print("Please enter a valid integer: ");
-			sc.next();
+			sc.nextLine();
 		}
 		return sc.nextInt();
 	}
@@ -17,6 +17,8 @@ public class InputCheck {
 		int userInt=0;
 		do{
 			userInt = getInt(sc, msg);
+			if(userInt<min||userInt>max)
+				System.out.println("Your choice was out of range.");
 		}while(userInt<min||userInt>max);
 		
 		return userInt;
