@@ -22,11 +22,21 @@ public class InputCheck {
 		return userInt;
 	}
 	
-	public static double getDouble(Scanner sc){//Loops until an double is entered, returns the double
+	public static double getDouble(Scanner sc){//Loops until a double is entered, returns the double
 		
 		while (!sc.hasNextDouble()){
 			System.out.print("Please enter a valid 'double' number: ");
 			sc.next();
+		}
+		return sc.nextDouble();
+	}
+	
+	public static double getDouble(Scanner sc, String msg){//Loops until a double is entered, returns the double
+		
+		System.out.print(msg);
+		while (!sc.hasNextDouble()){
+			System.out.print("Please enter a valid 'double' number: ");
+			sc.nextLine();
 		}
 		return sc.nextDouble();
 	}
