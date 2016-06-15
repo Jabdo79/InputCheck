@@ -64,5 +64,17 @@ public class InputCheck {
 			return false;
 		}
 	}
+	
+public static boolean cont(Scanner sc, String msg, String bye){//Returns TRUE if the user would like to continue
+		
+		System.out.print(msg);
+		String choice = sc.next();
+		if(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes")){
+			return true;
+		}else{
+			System.out.println("\n"+bye);
+			return false;
+		}
+	}
 
 }
