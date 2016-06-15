@@ -57,6 +57,7 @@ public class InputCheck {
 		
 		System.out.print(msg);
 		String choice = sc.next();
+		sc.nextLine();
 		if(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes")){
 			return true;
 		}else{
@@ -69,10 +70,11 @@ public static boolean cont(Scanner sc, String msg, String bye){//Returns TRUE if
 		
 		System.out.print(msg);
 		String choice = sc.next();
+		sc.nextLine();
 		if(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes")){
 			return true;
 		}else{
-			System.out.println("\n"+bye);
+			System.out.println(bye);
 			return false;
 		}
 	}
