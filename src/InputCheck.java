@@ -21,6 +21,9 @@ public class InputCheck {
 				System.out.println("Your choice was out of range.");
 		}while(userInt<min||userInt>max);
 		
+		//garbage collection
+		sc.nextLine();
+		
 		return userInt;
 	}
 	
